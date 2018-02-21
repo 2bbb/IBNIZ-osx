@@ -40,4 +40,17 @@ else
 fi
 
 cd $SRC_DIR
+make -f ../../Makefile clean
 make -f ../../Makefile
+cd ../..
+if [ ! -d bin ]; then
+	mkdir bin
+fi
+cp $SRC_DIR/ibniz bin
+
+if [ ! -f docs/ibniz.txt ]; then
+	if [ ! -d docs ]; then
+		mkdir docs
+	fi
+	wget http://pelulamu.net/ibniz/ibniz.txt -O docs/ibniz.txt
+fi
