@@ -1,0 +1,3 @@
+[submodule "IBNIZ"]
+	path = IBNIZ
+	url = https://github.com/viznut/IBNIZ.git
